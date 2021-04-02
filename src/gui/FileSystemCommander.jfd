@@ -1,0 +1,102 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"$sizePolicy": 1
+			"title": "文件系统 Shell"
+			"modal": true
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "panel"
+				"background": sfield java.awt.Color black
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "defaultInput"
+					"background": sfield java.awt.Color pink
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 115
+					"height": 35
+					"x": 0
+					"y": 560
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "vimModeInput"
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 20 )
+					"foreground": sfield java.awt.Color white
+					"caretColor": sfield java.awt.Color white
+					"background": sfield java.awt.Color darkGray
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"disabledTextColor": sfield java.awt.Color white
+					"enabled": false
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 0
+					"y": 510
+					"height": 45
+					"width": 840
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "cmdScrollPane"
+					"horizontalScrollBarPolicy": 31
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "cmd"
+						"background": &Color0 new java.awt.Color( 0, 0, 0, 255 )
+						"foreground": sfield java.awt.Color white
+						"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 0, 18 )
+						"lineWrap": true
+						"caretColor": sfield java.awt.Color white
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 0
+					"y": 0
+					"width": 825
+					"height": 535
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "vimScrollPane"
+					"horizontalScrollBarPolicy": 31
+					"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+					add( new FormComponent( "javax.swing.JTextArea" ) {
+						name: "vim"
+						"background": #Color0
+						"foreground": sfield java.awt.Color white
+						"font": #Font0
+						"lineWrap": true
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"caretColor": sfield java.awt.Color white
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 825
+					"height": 510
+					"x": 0
+					"y": 0
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 840, 600 )
+		} )
+	}
+}

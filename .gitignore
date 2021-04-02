@@ -1,0 +1,6 @@
+/.idea/
+/disk/
+/out/
+*.iml
+?.txt
+ProcessResults.txt

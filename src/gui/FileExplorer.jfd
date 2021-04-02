@@ -1,0 +1,542 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"$sizePolicy": 1
+			"title": "文件系统资源管理器"
+			"modal": true
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+				"autoSize": false
+			} ) {
+				name: "pathPanel"
+				"minimumSize": new java.awt.Dimension( 0, 0 )
+				"preferredSize": new java.awt.Dimension( 0, 40 )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"border": new javax.swing.border.LineBorder( sfield java.awt.Color lightGray, 1, false )
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "back"
+					"text": "text"
+					"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 30
+					"height": 30
+					"x": 10
+					"y": 5
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "forward"
+					"text": "text"
+					"icon": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"font": #Font0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 30
+					"height": 30
+					"x": 60
+					"y": 5
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "path"
+					"font": #Font0
+					"border": new javax.swing.border.LineBorder( sfield java.awt.Color gray, 1, false )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 120
+					"y": 5
+					"width": 1055
+					"height": 30
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "directoryPanel"
+				"preferredSize": new java.awt.Dimension( 200, 0 )
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "directoryScrollPane"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+					add( new FormComponent( "javax.swing.JTree" ) {
+						name: "directory"
+						"font": new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "West"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+				"autoSize": false
+			} ) {
+				name: "Detailpanel"
+				"preferredSize": new java.awt.Dimension( 200, 0 )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"border": new javax.swing.border.LineBorder( sfield java.awt.Color lightGray, 1, false )
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "fileNameLabel"
+					"text": "文件名"
+					"font": &Font1 new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 10
+					"y": 15
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "fileName"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 35
+					"x": 90
+					"y": 15
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inodeLabel"
+					"text": "inode编号"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 10
+					"y": 55
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inode"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 35
+					"x": 90
+					"y": 55
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "userLabel"
+					"text": "用户ID"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 10
+					"y": 95
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "user"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 35
+					"x": 90
+					"y": 95
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "groupLabel"
+					"text": "用户组ID"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 10
+					"y": 135
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "group"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 35
+					"x": 90
+					"y": 135
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "typeLabel"
+					"text": "文件类型"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 10
+					"y": 175
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "type"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 35
+					"x": 90
+					"y": 175
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "modeLabel"
+					"text": "访问权限"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 10
+					"y": 215
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "mode"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 35
+					"x": 90
+					"y": 215
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "sizeLabel"
+					"text": "文件大小"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 10
+					"y": 255
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "size"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 35
+					"x": 90
+					"y": 255
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "linkLabel"
+					"text": "硬链接数"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 10
+					"y": 295
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "link"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 35
+					"x": 90
+					"y": 295
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "createTimeLabel"
+					"text": "创建时间"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 10
+					"y": 335
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "createTime"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 35
+					"x": 90
+					"y": 335
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "updateTimeLabel"
+					"text": "更新时间"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 10
+					"y": 375
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "updateTime"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 100
+					"height": 35
+					"x": 90
+					"y": 375
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "East"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "fileArea"
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "fileScrollPane"
+					"horizontalScrollBarPolicy": 31
+					"maximumSize": new java.awt.Dimension( 798, 563 )
+					"preferredSize": new java.awt.Dimension( 798, 563 )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+						"alignment": 0
+						"hgap": 30
+						"vgap": 20
+					} ) {
+						name: "filePanel"
+						"background": new java.awt.Color( 255, 255, 255, 255 )
+						"preferredSize": new java.awt.Dimension( 798, 500 )
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+				"autoSize": false
+			} ) {
+				name: "statePanel"
+				"preferredSize": new java.awt.Dimension( 0, 40 )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"border": new javax.swing.border.LineBorder( sfield java.awt.Color lightGray, 1, false )
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "numLabel"
+					"text": "项目数："
+					"font": &Font2 new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 5
+					"width": 70
+					"height": 30
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "num"
+					"text": "0"
+					"font": #Font2
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 70
+					"height": 30
+					"x": 70
+					"y": 5
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 60, 0 )
+			"size": new java.awt.Dimension( 1200, 675 )
+		} )
+		add( new FormContainer( "javax.swing.JPopupMenu", new FormLayoutManager( class javax.swing.JPopupMenu ) ) {
+			name: "popupMenu"
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "createFile"
+				"text": "新建文件"
+				"font": &Font3 new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+			} )
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "createDir"
+				"text": "新建目录"
+				"font": #Font3
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 805, 670 )
+			"size": new java.awt.Dimension( 100, 75 )
+		} )
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "createFileDialog"
+			"title": "新建文件"
+			"$sizePolicy": 1
+			"alwaysOnTop": true
+			"modal": true
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "createFileName"
+				"text": "文件名"
+				"font": &Font4 new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 15
+				"y": 20
+				"width": 55
+				"height": 30
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "createFileNameInput"
+				"background": &Color0 new java.awt.Color( 255, 255, 255, 255 )
+				"font": &Font5 new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 75
+				"y": 15
+				"width": 255
+				"height": 40
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "confirmFileButton"
+				"text": "确定"
+				"font": &Font6 new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 75
+				"y": 65
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "cancelFileButton"
+				"text": "取消"
+				"font": &Font7 new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 78
+				"height": 30
+				"x": 195
+				"y": 65
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 435, 675 )
+			"size": new java.awt.Dimension( 360, 150 )
+		} )
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "createDirDialog"
+			"title": "新建目录"
+			"$sizePolicy": 1
+			"alwaysOnTop": true
+			"modal": true
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "createDirName"
+				"text": "目录名"
+				"font": #Font4
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 15
+				"y": 20
+				"width": 55
+				"height": 30
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "createDirNameInput"
+				"background": #Color0
+				"font": #Font5
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 75
+				"y": 15
+				"width": 255
+				"height": 40
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "confirmDirButton"
+				"text": "确定"
+				"font": #Font6
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 75
+				"y": 65
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "cancelDirButton"
+				"text": "取消"
+				"font": #Font7
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 78
+				"height": 30
+				"x": 195
+				"y": 65
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 360, 150 )
+			"location": new java.awt.Point( 60, 675 )
+		} )
+	}
+}

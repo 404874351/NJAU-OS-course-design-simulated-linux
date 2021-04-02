@@ -1,0 +1,949 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": "仿真Linux系统"
+			"defaultCloseOperation": 3
+			"$sizePolicy": 1
+			"$locationPolicy": 1
+			auxiliary() {
+				"JavaCodeGenerator.variableGetter": true
+			}
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "panel"
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "startButton"
+					"text": "启动"
+					"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+					"enabled": false
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 150
+					"height": 50
+					"x": 770
+					"y": 780
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "addJobButton"
+					"text": "添加作业"
+					"font": #Font0
+					"enabled": false
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 150
+					"height": 50
+					"x": 930
+					"y": 780
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "inMemButton"
+					"text": "查看内存信息"
+					"font": #Font0
+					"enabled": false
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 150
+					"height": 50
+					"x": 1090
+					"y": 780
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "exMemButton"
+					"text": "查看外存信息"
+					"font": #Font0
+					"enabled": false
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 150
+					"height": 50
+					"x": 1250
+					"y": 780
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "fileSystemButton"
+					"text": "文件系统"
+					"font": #Font0
+					"enabled": false
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 150
+					"height": 50
+					"x": 1410
+					"y": 780
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "consoleScrollPane"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+					add( new FormComponent( "javax.swing.JTextPane" ) {
+						name: "console"
+						"cursor": new java.awt.Cursor( 2 )
+						"editable": false
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 25
+					"y": 530
+					"width": 720
+					"height": 300
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "consoleLabel"
+					"text": "运行日志"
+					"font": &Font1 new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 25
+					"y": 500
+					"width": 80
+					"height": 30
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "readyQueueScrollPane"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 395
+					"y": 45
+					"width": 350
+					"height": 175
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "readyQueueLabel"
+					"text": "就绪队列"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 345
+					"height": 30
+					"x": 395
+					"y": 15
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "reserveQueueScrollPane"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 350
+					"height": 175
+					"x": 25
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "reserveQueueLabel"
+					"text": "后备队列"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 30
+					"x": 25
+					"y": 15
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "blockQueueLabel"
+					"text": "阻塞队列"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 30
+					"x": 25
+					"y": 230
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "blockQueueScrollPane"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 25
+					"y": 260
+					"width": 90
+					"height": 220
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "resourceblockQueueLabelA"
+					"text": "资源A阻塞"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 115
+					"height": 30
+					"x": 165
+					"y": 230
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "resourceblockQueueScrollPaneA"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 90
+					"height": 220
+					"x": 165
+					"y": 260
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "resourceblockQueueLabelB"
+					"text": "资源B阻塞"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 115
+					"height": 30
+					"x": 280
+					"y": 230
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "resourceblockQueueScrollPaneB"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 90
+					"height": 220
+					"x": 280
+					"y": 260
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "resourceblockQueueLabelC"
+					"text": "资源C阻塞"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 115
+					"height": 30
+					"x": 395
+					"y": 230
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "resourceblockQueueScrollPaneC"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 90
+					"height": 220
+					"x": 395
+					"y": 260
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "suspendQueueLabel"
+					"text": "挂起队列"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 30
+					"x": 540
+					"y": 230
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "suspendQueueScrollPane"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 90
+					"height": 220
+					"x": 540
+					"y": 260
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "finishQueueLabel"
+					"text": "完成队列"
+					"font": #Font1
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 30
+					"x": 655
+					"y": 230
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "finishQueueScrollPane"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 90
+					"height": 220
+					"x": 655
+					"y": 260
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "clockLabel"
+					"text": "系统时钟"
+					"font": &Font2 new java.awt.Font( "Microsoft YaHei UI", 0, 16 )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 770
+					"y": 15
+					"width": 80
+					"height": 32
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "timeLabel"
+					"text": "当前时间："
+					"font": &Font3 new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 775
+					"y": 45
+					"width": 75
+					"height": 35
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "clockStateLabel"
+					"text": "当前状态："
+					"font": #Font3
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 775
+					"y": 80
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "time"
+					"text": "0"
+					"font": &Font4 new java.awt.Font( "Microsoft YaHei UI", 0, 18 )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 850
+					"y": 45
+					"width": 75
+					"height": 35
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "clockState"
+					"text": "未启动"
+					"font": #Font4
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 850
+					"y": 80
+					"width": 75
+					"height": 35
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "clockBox"
+					"border": &LineBorder0 new javax.swing.border.LineBorder( sfield java.awt.Color gray, 1, false )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 770
+					"y": 45
+					"width": 160
+					"height": 75
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "cpuLabel"
+					"text": "CPU"
+					"font": #Font2
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 32
+					"x": 950
+					"y": 15
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "PCLabel"
+					"text": "PC："
+					"font": #Font3
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 35
+					"height": 35
+					"x": 955
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "IRLabel"
+					"text": "IR："
+					"font": #Font3
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 35
+					"height": 35
+					"x": 1030
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "PC"
+					"text": "0"
+					"font": #Font4
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 40
+					"height": 35
+					"x": 990
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "IR"
+					"text": "0"
+					"font": #Font4
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 40
+					"height": 35
+					"x": 1065
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "cpuStateLabel"
+					"text": "CPU状态："
+					"font": #Font3
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 955
+					"y": 80
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "cpuState"
+					"text": "用户态"
+					"font": #Font4
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 1030
+					"y": 80
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "cpuBox"
+					"border": #LineBorder0
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 160
+					"height": 75
+					"x": 950
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBLabel"
+					"text": "当前运行进程信息"
+					"font": #Font2
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 160
+					"height": 32
+					"x": 770
+					"y": 135
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBIdLabel"
+					"text": "进程 ID"
+					"font": &Font5 new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 775
+					"y": 165
+					"width": 75
+					"height": 35
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBId"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 855
+					"y": 165
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBPriorityLabel"
+					"text": "进程优先级"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 775
+					"y": 200
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBPriority"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 855
+					"y": 200
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBInstructionNumLabel"
+					"text": "进程指令数"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 775
+					"y": 235
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBInstructionNum"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 855
+					"y": 235
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBNeedPageNumLabel"
+					"text": "进程分配页"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 775
+					"y": 270
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBNeedPageNum"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 855
+					"y": 270
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBPCLabel"
+					"text": "进程 PC"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 945
+					"y": 165
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBPC"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 1025
+					"y": 165
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBIRLabel"
+					"text": "进程 IR"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 945
+					"y": 200
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBIR"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 1025
+					"y": 200
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBPageTableBaseAddressLabel"
+					"text": "页表基址"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 945
+					"y": 235
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBPageTableBaseAddress"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 1025
+					"y": 235
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBTimeSliceLabel"
+					"text": "剩余时间片"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 945
+					"y": 270
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runningPCBTimeSlice"
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 75
+					"height": 35
+					"x": 1025
+					"y": 270
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "runnningBox"
+					"border": #LineBorder0
+					"font": #Font5
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 340
+					"height": 140
+					"x": 770
+					"y": 165
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "pageTableLabel"
+					"text": "页表信息"
+					"font": #Font2
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 160
+					"height": 32
+					"x": 770
+					"y": 320
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "pageTableScrollPane"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 770
+					"y": 350
+					"width": 340
+					"height": 230
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "TLBLabel"
+					"text": "快表信息"
+					"font": #Font2
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 160
+					"height": 32
+					"x": 770
+					"y": 590
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "TLBScrollPane"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 340
+					"height": 150
+					"x": 770
+					"y": 620
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inMemAllocationLabel"
+					"text": "内存分配情况"
+					"font": #Font2
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 160
+					"height": 32
+					"x": 1140
+					"y": 15
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inMemLabel1"
+					"text": "00 - 07"
+					"font": &Font6 new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 1160
+					"y": 50
+					"width": 60
+					"height": 25
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inMemLabel2"
+					"text": "08 - 15"
+					"font": #Font6
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 60
+					"height": 25
+					"x": 1160
+					"y": 75
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inMemLabel3"
+					"text": "16 - 23"
+					"font": #Font6
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 60
+					"height": 25
+					"x": 1160
+					"y": 100
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inMemLabel4"
+					"text": "24 - 31"
+					"font": #Font6
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 60
+					"height": 25
+					"x": 1160
+					"y": 125
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inMemLabel5"
+					"text": "32 - 39"
+					"font": #Font6
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 60
+					"height": 25
+					"x": 1160
+					"y": 150
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inMemLabel6"
+					"text": "40 - 47"
+					"font": #Font6
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 60
+					"height": 25
+					"x": 1160
+					"y": 175
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inMemLabel7"
+					"text": "48 - 55"
+					"font": #Font6
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 60
+					"height": 25
+					"x": 1160
+					"y": 200
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inMemLabel8"
+					"text": "56 - 63"
+					"font": #Font6
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 60
+					"height": 25
+					"x": 1160
+					"y": 225
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "inMemBox"
+					"border": new javax.swing.border.LineBorder( sfield java.awt.Color gray, 1, false )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 1140
+					"y": 45
+					"width": 420
+					"height": 210
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "swapAreaAllocationLabel"
+					"text": "外存交换区分配情况"
+					"font": #Font2
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 160
+					"height": 32
+					"x": 1140
+					"y": 265
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "swapAreaAllocationScrollPane"
+					"horizontalScrollBarPolicy": 31
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+						name: "swapAreaPanel"
+						"autoscrolls": true
+						"preferredSize": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 1140
+					"y": 300
+					"width": 420
+					"height": 470
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1600, 900 )
+		} )
+	}
+}

@@ -1,0 +1,83 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+			"autoSize": false
+		} ) {
+			name: "this"
+			"preferredSize": new java.awt.Dimension( 120, 150 )
+			"background": new java.awt.Color( 255, 255, 255, 255 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "imgLabel"
+				"text": "text"
+				"background": new java.awt.Color( 255, 255, 255, 0 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 10
+				"y": 10
+				"width": 100
+				"height": 100
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "nameInput"
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+				"background": new java.awt.Color( 255, 255, 255, 255 )
+				"caretColor": new java.awt.Color( 0, 0, 0, 255 )
+				"disabledTextColor": new java.awt.Color( 0, 0, 0, 255 )
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				"horizontalAlignment": 0
+				"editable": false
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 10
+				"y": 110
+				"width": 100
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 5 )
+			"size": new java.awt.Dimension( 120, 150 )
+		} )
+		add( new FormContainer( "javax.swing.JPopupMenu", new FormLayoutManager( class javax.swing.JPopupMenu ) ) {
+			name: "popupMenu"
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "open"
+				"text": "打开"
+				"font": &Font0 new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+			} )
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "rename"
+				"text": "重命名"
+				"font": #Font0
+			} )
+			add( new FormComponent( "javax.swing.JMenuItem" ) {
+				name: "delete"
+				"text": "删除"
+				"font": #Font0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 195, 45 )
+			"size": new java.awt.Dimension( 100, 90 )
+		} )
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "editorDialog"
+			"title": "文本编辑器"
+			"modal": true
+			"$sizePolicy": 1
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "editorScrollPane"
+				"horizontalScrollBarPolicy": 31
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "editor"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"font": new java.awt.Font( "Microsoft YaHei UI", 0, 18 )
+					"lineWrap": true
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 390, 45 )
+			"size": new java.awt.Dimension( 550, 500 )
+		} )
+	}
+}
