@@ -1,6 +1,5 @@
-/.idea/
-/disk/
-/out/
+/.idea
+/disk
+/out
 *.iml
-?.txt
 ProcessResults.txt
