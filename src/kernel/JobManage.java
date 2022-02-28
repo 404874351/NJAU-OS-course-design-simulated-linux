@@ -36,7 +36,7 @@ public class JobManage {
         this.inputFileLineNum = 0;
 
         // 初始化作业请求文件（这一步是为了兼容默认存在的8个作业请求）
-        File jobsInputFile = new File("./19318220-jobs-input.txt");
+        File jobsInputFile = new File("./xxxxx-jobs-input.txt");
         try {
             String defaultContent = "";
             String lineData = "";
@@ -73,7 +73,7 @@ public class JobManage {
      * 随机生成新的作业请求，追加到xxx-job-input.txt文件中
      */
     public synchronized void addJob() {
-        File jobsInputFile = new File("./19318220-jobs-input.txt");
+        File jobsInputFile = new File("./xxxxx-jobs-input.txt");
         try {
             // 设置追加写入txt
             BufferedWriter appendJob = new BufferedWriter(new FileWriter(jobsInputFile,true));
@@ -250,7 +250,7 @@ public class JobManage {
      * 系统读取作业，进入后备队列
      */
     public synchronized void readJobs() {
-        File jobsInputFile = new File("./19318220-jobs-input.txt");
+        File jobsInputFile = new File("./xxxxx-jobs-input.txt");
         try {
             // 读取作业请求文件
             BufferedReader jobReader = new BufferedReader(new FileReader(jobsInputFile));

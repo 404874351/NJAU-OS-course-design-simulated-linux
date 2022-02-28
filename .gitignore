@@ -1,5 +1,8 @@
-/.idea
-/disk
-/out
+.idea
+**/META-INF
 *.iml
+target
+
+disk
+out
 ProcessResults.txt
